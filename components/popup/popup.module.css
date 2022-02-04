@@ -36,7 +36,6 @@
 }
 .popup__table span,
 .popup__table a {
-  flex: 1 1;
   width: 100%;
   border: 1px solid gray;
   padding: 7px 15px;
@@ -51,4 +50,62 @@
 .popup__closebtn div {
   cursor: pointer;
   padding-bottom: 10px;
+}
+
+.chainList {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.popup__chain {
+  padding: 10px 20px;
+  background: #f3f3f3;
+  font-weight: 600;
+  cursor: pointer;
+  margin-bottom: 10px;
+  color: gray;
+}
+
+.tab__active {
+  background: #2f80ed;
+  color: white;
+}
+
+.popup__title {
+  font-weight: 700;
+  font-size: 24px;
+  display: block;
+  margin-bottom: 20px;
+}
+
+.popup__tablerow {
+  display: flex !important;
+  /* grid-template-columns: 1fr 1fr; */
+}
+
+.popup__tablerow a,
+.popup__tablerow span {
+  flex: 1 1;
+  width: 50%;
+}
+
+@media screen and (max-width: 800px) {
+  .popup {
+    min-width: auto;
+    padding: 30px;
+    padding-bottom: 50px;
+  }
+  .popup__container {
+    box-sizing: border-box;
+  }
+  .chainList {
+    justify-content: center;
+  }
+  .popup__chain {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }

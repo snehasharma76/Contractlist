@@ -75,12 +75,56 @@ export default function Chain({ chain, setPopupVisible, setPopupData }) {
   // }
 
   const openModal = () => {
-    const tempData = [...Array(5)].map((_i) => ({
-      contract: "LendingPoolAddressesProvider",
-      address: "0xB53C1a33016B2DC2fF3653530bfF1848a515c8c5",
-      github: "https://github.com",
-    }));
-    setPopupData(tempData);
+    setPopupData({
+      name: "Aave",
+      chains: ["ETH", "Polygon", "Mumbai"],
+      icon: "aave",
+      infoURL: "https://app.aave.com/",
+      contracts: {
+        ETH: [
+          {
+            name: "LendingPoolAddressesProvider",
+            github:
+              "https://github.com/aave/protocol-v2/blob/ice/mainnet-deployment-03-12-2020/contracts/protocol/configuration/LendingPoolAddressesProvider.sol",
+            address: "0xd05e3E715d945B59290df0ae8eF85c1BdB684744",
+          },
+          {
+            name: "LendingPoolAddressesProviderRegistry",
+            github:
+              "https://github.com/aave/protocol-v2/blob/ice/mainnet-deployment-03-12-2020/contracts/protocol/configuration/LendingPoolAddressesProvider.sol",
+            address: "0x3ac4e9aa29940770aeC38fe853a4bbabb2dA9C19",
+          },
+        ],
+        Polygon: [
+          {
+            name: "LendingPoolAddressesProvider",
+            github:
+              "https://github.com/aave/protocol-v2/blob/ice/mainnet-deployment-03-12-2020/contracts/protocol/configuration/LendingPoolAddressesProvider.sol",
+            address: "0x26db2B833021583566323E3b8985999981b9F1F3",
+          },
+          {
+            name: "LendingPoolAddressesProviderRegistry",
+            github:
+              "https://github.com/aave/protocol-v2/blob/ice/mainnet-deployment-03-12-2020/contracts/protocol/configuration/LendingPoolAddressesProvider.sol",
+            address: "0x17f73aead876cc4059089ff815eda37052960dfb",
+          },
+        ],
+        Mumbai: [
+          {
+            name: "LendingPoolAddressesProvider",
+            github:
+              "https://github.com/aave/protocol-v2/blob/ice/mainnet-deployment-03-12-2020/contracts/protocol/configuration/LendingPoolAddressesProvider.sol",
+            address: "0xbad24a42b621eed9033409736219c01bf0d8500f",
+          },
+          {
+            name: "LendingPoolAddressesProviderRegistry",
+            github:
+              "https://github.com/aave/protocol-v2/blob/ice/mainnet-deployment-03-12-2020/contracts/protocol/configuration/LendingPoolAddressesProvider.sol",
+            address: "0x3ac4e9aa29940770aeC38fe853a4bbabb2dA9C19",
+          },
+        ],
+      },
+    });
     setPopupVisible(true);
   };
 
