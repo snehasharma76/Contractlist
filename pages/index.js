@@ -124,7 +124,7 @@ function Home({ changeTheme, theme }) {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Chainlist</title>
+        <title>Contractlist</title>
         <link rel="icon" href="/favicon.png" />
       </Head>
 
@@ -132,9 +132,9 @@ function Home({ changeTheme, theme }) {
         <div className={ theme.palette.type === 'dark' ? classes.containerDark : classes.container }>
           <div className={ classes.copyContainer }>
             <div className={ classes.copyCentered }>
-              <Typography variant='h1' className={ classes.chainListSpacing }><span className={ classes.helpingUnderline }>Chainlist</span></Typography>
-              <Typography variant='h2' className={ classes.helpingParagraph }>Helping users connect to EVM powered networks</Typography>
-              <Typography className={classes.subTitle}>Chainlist is a list of EVM networks. Users can use the information to connect their wallets and Web3 middleware providers to the appropriate Chain ID and Network ID to connect to the correct chain.</Typography>
+              <Typography variant='h1' className={ classes.chainListSpacing }><span className={ classes.helpingUnderline }>Contractlist</span></Typography>
+              <Typography variant='h2' className={ classes.helpingParagraph }>Helping Devs and Users to instantly access Smart Contract Addresses of Blockchain projects</Typography>
+              <Typography className={classes.subTitle}>Contractlist is a list of smart contract addresses of various DApps and Protocols. Users can use the information to know about the latest set of contracts and their addresses.</Typography>
               <Button
                 size='large'
                 color='primary'
