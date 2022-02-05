@@ -2,7 +2,7 @@
 {
     "name":"POLYDEX",
     "chains": ["Polygon"],
-    "icon":"POLYDEX",
+    "icon":"https://polygon.technology/_nuxt/img/attctFgyyqGh6ArxE.5bc1cdd.jpg",
     "infoURL":"https://www.polydex.fi/",
     "contracts":{
         "Polygon": [
@@ -22,7 +22,7 @@
 {
     "name":"AAVE",
     "chains": ["Polygon","Ethereum"],
-    "icon":"AAVE",
+    "icon":"https://polygon.technology/_nuxt/img/atttBDKRpIeCwW3lt.e46e62e.jpg",
     "infoURL":"https://aave.com/",
     "contracts":{
         "Polygon": [
@@ -134,7 +134,7 @@
 {
     "name":"POLYSHIELD",
     "chains": ["Polygon"],
-    "icon":"POLYSHIELD",
+    "icon":"https://polygon.technology/_nuxt/img/attwUBs1eqAYqYdkc.c30ba09.png",
     "infoURL":"https://polyshield.finance/#/home",
     "contracts":{
         "Polygon": [
@@ -164,7 +164,7 @@
 {
     "name":"ARKEN FINANCE",
     "chains": ["Polygon"],
-    "icon":"ARKEN FINANCE",
+    "icon": "https://polygon.technology/_nuxt/img/attpEM0cpYRF2aQif.273817e.JPG",
     "infoURL":"https://swap.arken.finance/",
     "contracts":{
         "Polygon": [
@@ -199,7 +199,7 @@
 {
     "name":"TIMELEAP",
     "chains": ["Polygon"],
-    "icon":"TIMELEAP",
+    "icon":"https://polygon.technology/_nuxt/img/attzTegHuF7bwTWdT.8f3c5c4.png",
     "infoURL":"https://timeleap.finance/",
     "contracts":{
         "Polygon": [
@@ -234,7 +234,7 @@
 {
     "name":"POLLY FINANCE",
     "chains": ["Polygon"],
-    "icon":"POLLY FINANCE",
+    "icon":"https://polygon.technology/_nuxt/img/attEv4TZIxrL6xwEg.60538f6.png",
     "infoURL":"https://pollyfinance.com/",
     "contracts":{
         "Polygon": [
@@ -294,7 +294,7 @@
 {
     "name":"ETHA LEND",
     "chains": ["Polygon"],
-    "icon":"ETHA LEND",
+    "icon":"https://polygon.technology/_nuxt/img/attwdGx7Ewnb01zrZ.84ce7e5.png",
     "infoURL":"https://www.ethalend.org/",
     "contracts":{
         "Polygon": [
@@ -374,7 +374,7 @@
 {
     "name":"SILO FINANCE",
     "chains": ["Polygon"],
-    "icon":"SILO FINANCE",
+    "icon":"https://polygon.technology/_nuxt/img/attIHCxmt79aGnAkR.87b2910.png",
     "infoURL":"https://www.silo.finance/",
     "contracts":{
         "Polygon": [
@@ -404,7 +404,7 @@
 {
     "name":"KAKI DEX",
     "chains": ["Polygon"],
-    "icon":"KAKI DEX",
+    "icon":"https://polygon.technology/_nuxt/img/attm0i7WD8gdfXqSN.0a7af6f.jpg",
     "infoURL":"https://kakidex.com/",
     "contracts":{
         "Polygon": [
@@ -449,7 +449,7 @@
 {
     "name":"Symphony Finance",
     "chains": ["Polygon","Avalanche"],
-    "icon":"Symphony Finance",
+    "icon":"https://polygon.technology/_nuxt/img/attOdAKgiLkGVfWZo.ce94eab.svg",
     "infoURL":"https://www.silo.finance/",
     "contracts":{
         "Polygon": [
@@ -468,5 +468,4 @@
         ]
     }
 }
-
 ]
