@@ -19,7 +19,6 @@ import {
 import ToggleButton from "@material-ui/lab/ToggleButton";
 import ToggleButtonGroup from "@material-ui/lab/ToggleButtonGroup";
 import Chain from "../components/chain";
-import MultiChain from "../components/multichain";
 import Header from "../components/header";
 
 import SearchIcon from "@material-ui/icons/Search";
@@ -96,7 +95,6 @@ function Home({ changeTheme, theme }) {
 
   const [layout, setLayout] = useState("grid");
   const [search, setSearch] = useState("");
-  const [hideMultichain, setHideMultichain] = useState("1");
   const router = useRouter();
   if (router.query.search) {
     setSearch(router.query.search);
@@ -115,27 +113,13 @@ function Home({ changeTheme, theme }) {
   };
 
   const addNetwork = () => {
-    window.open("https://github.com/ethereum-lists/chains", "_blank");
+    window.open("https://github.com/renof112/Contractlist", "_blank");
   };
-
-  const closeMultichain = (perma) => {
-    setHideMultichain("1");
-    localStorage.setItem("chainlist.org-hideMultichain", perma ? "1" : "0");
-  };
-
-  useEffect(() => {
-    const multi = localStorage.getItem("chainlist.org-hideMultichain");
-    if (multi) {
-      setHideMultichain(multi);
-    } else {
-      setHideMultichain("0");
-    }
-  }, []);
 
   return (
     <div className={styles.container}>
       <Head>
-        <title>Chainlist</title>
+        <title>Contractlist</title>
         <link rel="icon" href="/favicon.png" />
       </Head>
 
@@ -150,16 +134,15 @@ function Home({ changeTheme, theme }) {
           <div className={classes.copyContainer}>
             <div className={classes.copyCentered}>
               <Typography variant="h1" className={classes.chainListSpacing}>
-                <span className={classes.helpingUnderline}>Chainlist</span>
+                <span className={classes.helpingUnderline}>Contractlist</span>
               </Typography>
               <Typography variant="h2" className={classes.helpingParagraph}>
-                Helping users connect to EVM powered networks
+                Instantly access Smart Contract addresses of Blockchain Projects
               </Typography>
               <Typography className={classes.subTitle}>
-                Chainlist is a list of EVM networks. Users can use the
-                information to connect their wallets and Web3 middleware
-                providers to the appropriate Chain ID and Network ID to connect
-                to the correct chain.
+                Contractlist is a list of smart contract addresses of popular DApps and
+                Protocols. Developers can use the platform to view latest contracts and 
+                addresses.
               </Typography>
               <Button
                 size="large"
@@ -170,13 +153,13 @@ function Home({ changeTheme, theme }) {
                 endIcon={<AddIcon />}
               >
                 <Typography className={classes.buttonLabel}>
-                  Add Your Network
+                  Add Your Contracts
                 </Typography>
               </Button>
               <div className={classes.socials}>
                 <a
                   className={`${classes.socialButton}`}
-                  href="https://github.com/antonnell/networklist-org.git"
+                  href="https://github.com/renof112/Contractlist"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -191,7 +174,7 @@ function Home({ changeTheme, theme }) {
                   </Typography>
                 </a>
                 <Typography variant="subtitle1" className={classes.version}>
-                  Version 1.0.7
+                  Version 1.0.0
                 </Typography>
               </div>
             </div>
@@ -217,7 +200,7 @@ function Home({ changeTheme, theme }) {
                       fullWidth
                       className={classes.searchContainer}
                       variant="outlined"
-                      placeholder="ETH, Fantom, ..."
+                      placeholder="Aave, Uniswap, ..."
                       value={search}
                       onChange={onSearchChanged}
                       InputProps={{
@@ -231,7 +214,7 @@ function Home({ changeTheme, theme }) {
                             <Typography
                               className={classes.searchInputAdnornment}
                             >
-                              Search Networks
+                              Search Projects
                             </Typography>
                           </InputAdornment>
                         ),
@@ -243,9 +226,9 @@ function Home({ changeTheme, theme }) {
               <Header changeTheme={changeTheme} />
             </div>
             <div className={classes.cardsContainer}>
-              {hideMultichain === "0" && (
+              {/* {hideMultichain === "0" && (
                 <MultiChain closeMultichain={closeMultichain} />
-              )}
+              )} */}
               {data &&
                 data
                   .filter((chain) => {
@@ -297,25 +280,3 @@ function Home({ changeTheme, theme }) {
 }
 
 export default withTheme(Home);
-
-// export const getStaticProps  = async () => {
-//
-//   try {
-//     const chainsResponse = await fetch('https://chainid.network/chains.json')
-//     const chainsJson = await chainsResponse.json()
-//
-//     return {
-//       props: {
-//         chains: chainsJson
-//       },
-//       revalidate: 60,
-//     }
-//   } catch (ex) {
-//     return {
-//       props: {
-//         chains: []
-//       }
-//     }
-//   }
-//
-// }
