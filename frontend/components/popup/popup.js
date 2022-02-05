@@ -4,14 +4,13 @@ import classes from "./popup.module.css";
 const Popup = ({ visible, setVisible, data }) => {
   const [activeTab, setActiveTab] = useState();
   const [isMobile, setIsMobile] = useState(true);
+  const [checked, setChecked] = useState();
   const popupRef = useRef();
 
   useEffect(() => {
     if (window?.innerWidth > 800) setIsMobile(false);
-    if (visible) {
-      setActiveTab(data.chains[0]);
-    }
-  }, []);
+    if (visible) setActiveTab(data?.chains?.[0]);
+  }, [visible]);
 
   const handleClick = (e) => {
     return;
@@ -19,6 +18,14 @@ const Popup = ({ visible, setVisible, data }) => {
     if (e.target !== popup) {
       setVisible(false);
     }
+  };
+
+  const copyAddressToClipboard = (address) => {
+    setChecked(address);
+    navigator.clipboard.writeText(address);
+    setTimeout(() => {
+      setChecked(undefined);
+    }, 3000);
   };
 
   if (!visible) return null;
@@ -60,10 +67,24 @@ const Popup = ({ visible, setVisible, data }) => {
               <a href={d?.github} target="_blank" rel="noopener noreferrer">
                 {isMobile ? `${d?.name.slice(0, 12)}...` : d?.name}
               </a>
-              <span>
+              <span className={classes.address}>
                 {isMobile
                   ? `${d?.address?.slice(0, 6)}...${d?.address?.slice(-6)}`
                   : d?.address}
+                {checked === d?.address ? (
+                  <p
+                    style={{ color: "greenyellow", margin: 0, fontWeight: 900 }}
+                  >
+                    &#10004;
+                  </p>
+                ) : (
+                  <img
+                    src="https://img.icons8.com/material-rounded/50/000000/copy.png"
+                    alt="Copy to Clipboard"
+                    className={classes.copy}
+                    onClick={() => copyAddressToClipboard(d?.address)}
+                  />
+                )}
               </span>
             </div>
           ))}
