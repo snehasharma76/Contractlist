@@ -12,14 +12,13 @@ import {
   CONNECT_WALLET,
   TRY_CONNECT_WALLET,
   ACCOUNT_CONFIGURED
-} from '../../stores/constants'
+} from '../../stores/constants';
 
-// import Unlock from '../unlock'
 
-import stores from '../../stores'
-import { formatAddress, getProvider } from '../../utils'
+import stores from '../../stores';
+import { formatAddress, getProvider } from '../../utils';
 
-import classes from './header.module.css'
+import classes from './header.module.css';
 
 const StyledSwitch = withStyles((theme) => ({
   root: {
@@ -80,26 +79,26 @@ function Header(props) {
   const [ unlockOpen, setUnlockOpen ] = useState(false);
 
   useEffect(() => {
-    const accountConfigure = () => {
-      const accountStore = stores.accountStore.getStore('account')
-      setAccount(accountStore)
-    }
-    const connectWallet = () => {
-      onAddressClicked()
-      stores.dispatcher.dispatch({ type: TRY_CONNECT_WALLET })
-    }
+    // const accountConfigure = () => {
+    //   const accountStore = stores.accountStore.getStore('account')
+    //   setAccount(accountStore)
+    // }
+    // const connectWallet = () => {
+    //   onAddressClicked()
+    //   stores.dispatcher.dispatch({ type: TRY_CONNECT_WALLET })
+    // }
 
-    stores.emitter.on(ACCOUNT_CONFIGURED, accountConfigure)
-    stores.emitter.on(CONNECT_WALLET, connectWallet)
+    // stores.emitter.on(ACCOUNT_CONFIGURED, accountConfigure)
+    // stores.emitter.on(CONNECT_WALLET, connectWallet)
 
 
-    const accountStore = stores.accountStore.getStore('account')
-    setAccount(accountStore)
+    // const accountStore = stores.accountStore.getStore('account')
+    // setAccount(accountStore)
 
-    return () => {
-      stores.emitter.removeListener(ACCOUNT_CONFIGURED, accountConfigure)
-      stores.emitter.removeListener(CONNECT_WALLET, connectWallet)
-    }
+    // return () => {
+    //   stores.emitter.removeListener(ACCOUNT_CONFIGURED, accountConfigure)
+    //   stores.emitter.removeListener(CONNECT_WALLET, connectWallet)
+    // }
   }, [])
 
   const handleToggleChange = (event, val) => {
@@ -107,9 +106,9 @@ function Header(props) {
     props.changeTheme(val)
   }
 
-  const onAddressClicked = () => {
-    stores.dispatcher.dispatch({ type: TRY_CONNECT_WALLET })
-  }
+  // const onAddressClicked = () => {
+  //   stores.dispatcher.dispatch({ type: TRY_CONNECT_WALLET })
+  // }
 
   const renderProviderLogo = () => {
     const providerLogoList = {
@@ -146,7 +145,7 @@ function Header(props) {
           onChange={ handleToggleChange }
         />
       </div>
-      <Button
+      {/* <Button
         disableElevation
         className={ classes.accountButton }
         variant='contained'
@@ -155,9 +154,9 @@ function Header(props) {
         >
         { account && account.address && <div className={ `${classes.accountIcon} ${classes[renderProviderLogo()]}` }></div>}
         <Typography variant='h5'>{ (account && account.address)? formatAddress(account.address) : 'Connect Wallet' }</Typography>
-      </Button>
+      </Button> */}
     </div>
   )
 }
 
-export default withTheme(Header)
+export default withTheme(Header);
