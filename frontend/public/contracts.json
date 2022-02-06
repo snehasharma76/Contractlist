@@ -1,11 +1,11 @@
 [
 {
     "name":"POLYDEX",
-    "chains": ["Polygon"],
+    "chains": [137],
     "icon":"https://polygon.technology/_nuxt/img/attctFgyyqGh6ArxE.5bc1cdd.jpg",
     "infoURL":"https://www.polydex.fi/",
     "contracts":{
-        "Polygon": [
+        "137": [
             {
                 "name":"PolyDEX Router V2",
                 "github":"https://github.com/polydex-fi/polydex-swap-periphery/blob/main/contracts/PolydexRouter.sol",
@@ -21,11 +21,11 @@
 },
 {
     "name":"AAVE",
-    "chains": ["Polygon","Ethereum"],
+    "chains": [137, 1],
     "icon":"https://polygon.technology/_nuxt/img/atttBDKRpIeCwW3lt.e46e62e.jpg",
     "infoURL":"https://aave.com/",
     "contracts":{
-        "Polygon": [
+        "137": [
             {
                 "name":"LendingPoolAddressesProvider",
                 "github":"https://github.com/aave/protocol-v2/blob/ice/mainnet-deployment-03-12-2020/contracts/protocol/configuration/LendingPoolAddressesProvider.sol",
@@ -87,7 +87,7 @@
                 "address":"0x7734280A4337F37Fbf4651073Db7c28C80B339e9"
             }
         ],
-        "Ethereum": [
+        "1": [
             {
                 "name":"LendingPoolAddressesProvider",
                 "github":"https://github.com/aave/protocol-v2/blob/master/contracts/protocol/configuration/LendingPoolAddressesProvider.sol",
@@ -133,11 +133,11 @@
 },
 {
     "name":"POLYSHIELD",
-    "chains": ["Polygon"],
+    "chains": [137],
     "icon":"https://polygon.technology/_nuxt/img/attwUBs1eqAYqYdkc.c30ba09.png",
     "infoURL":"https://polyshield.finance/#/home",
     "contracts":{
-        "Polygon": [
+        "137": [
             {
                 "name":"POLYSHIELD",
                 "github":"https://github.com/polyshield-finance/polyshield-contracts/blob/main/Polyshield.sol",
@@ -163,11 +163,11 @@
 },
 {
     "name":"ARKEN FINANCE",
-    "chains": ["Polygon"],
+    "chains": [137],
     "icon": "https://polygon.technology/_nuxt/img/attpEM0cpYRF2aQif.273817e.JPG",
     "infoURL":"https://swap.arken.finance/",
     "contracts":{
-        "Polygon": [
+        "137": [
             {
                 "name":"TransparentUpgradeableProxy",
                 "github":"",
@@ -198,11 +198,11 @@
 },
 {
     "name":"TIMELEAP",
-    "chains": ["Polygon"],
+    "chains": [137],
     "icon":"https://polygon.technology/_nuxt/img/attzTegHuF7bwTWdT.8f3c5c4.png",
     "infoURL":"https://timeleap.finance/",
     "contracts":{
-        "Polygon": [
+        "137": [
             {
                 "name":"TIME Token",
                 "github":"https://github.com/timeleapfinance/timeleap-contracts/blob/master/farm/TimeToken.sol",
@@ -233,11 +233,11 @@
 },
 {
     "name":"POLLY FINANCE",
-    "chains": ["Polygon"],
+    "chains": [137],
     "icon":"https://polygon.technology/_nuxt/img/attEv4TZIxrL6xwEg.60538f6.png",
     "infoURL":"https://pollyfinance.com/",
     "contracts":{
-        "Polygon": [
+        "137": [
             {
                 "name":"PieFactory",
                 "github":"",
@@ -293,11 +293,11 @@
 },
 {
     "name":"ETHA LEND",
-    "chains": ["Polygon"],
+    "chains": [137],
     "icon":"https://polygon.technology/_nuxt/img/attwdGx7Ewnb01zrZ.84ce7e5.png",
     "infoURL":"https://www.ethalend.org/",
     "contracts":{
-        "Polygon": [
+        "137": [
             {
                 "name":"StakingLogic",
                 "github":"",
@@ -373,11 +373,11 @@
 },
 {
     "name":"SILO FINANCE",
-    "chains": ["Polygon"],
+    "chains": [137],
     "icon":"https://polygon.technology/_nuxt/img/attIHCxmt79aGnAkR.87b2910.png",
     "infoURL":"https://www.silo.finance/",
     "contracts":{
-        "Polygon": [
+        "137": [
             {
                 "name":"SiloGovernanceToken ",
                 "github":"",
@@ -403,11 +403,11 @@
 },
 {
     "name":"KAKI DEX",
-    "chains": ["Polygon"],
+    "chains": [137],
     "icon":"https://polygon.technology/_nuxt/img/attm0i7WD8gdfXqSN.0a7af6f.jpg",
     "infoURL":"https://kakidex.com/",
     "contracts":{
-        "Polygon": [
+        "137": [
             {
                 "name":"Factory Address ",
                 "github":"",
@@ -448,18 +448,18 @@
 },
 {
     "name":"Symphony Finance",
-    "chains": ["Polygon","Avalanche"],
+    "chains": [137, 43114],
     "icon":"https://polygon.technology/_nuxt/img/attOdAKgiLkGVfWZo.ce94eab.svg",
     "infoURL":"https://www.silo.finance/",
     "contracts":{
-        "Polygon": [
+        "137": [
             {
                 "name":"Yolo ",
                 "github":"https://github.com/symphony-finance/polygon-contracts/blob/master/contracts/Yolo.sol",
                 "address":"0x935b97586FE291750F46Bf4eD7BeB8E1c3d110A2 "
             }
         ],
-        "Avalanche": [
+        "43114": [
             {
                 "name":"Yolo ",
                 "github":"",

@@ -3,7 +3,6 @@ pragma solidity ^0.8.0;
 
 import "@chainlink/contracts/src/v0.8/ChainlinkClient.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
-import "hardhat/console.sol";
 
 contract APIConsumer is ChainlinkClient, Ownable {
     using Chainlink for Chainlink.Request;
@@ -14,6 +13,7 @@ contract APIConsumer is ChainlinkClient, Ownable {
     string private api_endpoint;
 
     bytes32 public addr;
+    string public pathOfValue = "body";
     
     constructor(address _linkaddress, address _oracle, string memory _jobId) {
         setChainlinkToken(_linkaddress);                                                                                                                                                                        
@@ -62,6 +62,10 @@ contract APIConsumer is ChainlinkClient, Ownable {
         jobId = _jobId;
     }
 
+    function setPath(string memory _pathOfValue) external onlyOwner {
+        pathOfValue = _pathOfValue;
+    }
+
     /**
      * Get the oracle
      * @return oracleAddress 
@@ -85,12 +89,19 @@ contract APIConsumer is ChainlinkClient, Ownable {
     function getJobId() external view returns(bytes32 jobIdentifier) {
         return jobId;
     }
+
+    function getPathOfValue() external view returns(string memory) {
+        return pathOfValue;
+    }
     
-    function requestContractAddress(string memory _pathOfValue) public returns (bytes32 requestId) {        
+    function requestContractAddress(string memory _projectName, string memory _contractName) public returns (bytes32 requestId) {        
         Chainlink.Request memory request = buildChainlinkRequest(jobId, address(this), this.fulfill.selector);
         
-        request.add("get", api_endpoint);
-        request.add("path", _pathOfValue);
+        request.add(
+            "get", 
+            string(abi.encodePacked(api_endpoint, "?project=", _projectName, "&chain=", uint2str(block.chainid), "&contract=", _contractName))
+        );
+        request.add("path", pathOfValue);
         
         // Sends the request
         requestId = sendChainlinkRequestTo(oracle, request, fee);
