@@ -12,14 +12,14 @@ contract APIConsumer is ChainlinkClient, Ownable {
     uint256 private fee;
     string private api_endpoint;
 
-    bytes32 public addr;
+    address public addr;
     string public pathOfValue = "body";
     
-    constructor(address _linkaddress, address _oracle, string memory _jobId) {
+    constructor(address _linkaddress, address _oracle, bytes32 _jobId) {
         setChainlinkToken(_linkaddress);                                                                                                                                                                        
         oracle = _oracle;
-        jobId = keccak256(abi.encodePacked(_jobId));
-        fee = 0.01 * 10 ** 18;
+        jobId = _jobId;
+        fee = 0.1 * 10 ** 18;
     }
 
     function uint2str(uint _i) internal pure returns (string memory _uintAsString) {
@@ -99,9 +99,9 @@ contract APIConsumer is ChainlinkClient, Ownable {
         
         request.add(
             "get", 
-            string(abi.encodePacked(api_endpoint, "?project=", _projectName, "&chain=", uint2str(block.chainid), "&contract=", _contractName))
+            string(abi.encodePacked(api_endpoint, "?project=", _projectName, "&chain=", uint2str(137), "&contract=", _contractName))
         );
-        request.add("path", pathOfValue);
+        request.add("path", "body");
         
         // Sends the request
         requestId = sendChainlinkRequestTo(oracle, request, fee);
@@ -109,6 +109,6 @@ contract APIConsumer is ChainlinkClient, Ownable {
     }    
    
     function fulfill(bytes32 _requestId, bytes32 _addr) public recordChainlinkFulfillment(_requestId)  {
-        addr = _addr;
+        addr = address(uint160(uint256(_addr)));
     }    
 }
