@@ -467,5 +467,268 @@
             }
         ]
     }
+},
+    {
+    "name":"Kommunitas",
+    "chains": ["Polygon","Ethereum"],
+    "icon":"https://polygon.technology/_nuxt/img/att1Qfltr92ZbaSsZ.88f5103.png",
+    "infoURL":"https://kommunitas.net/",
+    "contracts":{
+        "Polygon": [
+            {
+                "name":"KOM Token",
+                "github":"",
+                "address":"0xc004e2318722ea2b15499d6375905d75ee5390b8"
+            },
+            {
+                "name":"Old KomV (KOM Voting)",
+                "github":"",
+                "address":"0x56190005fd8740f8e2d3b805edc14e007045725b"
+            },
+            {
+                "name":"New KomV (KOM Voting)",
+                "github":"",
+                "address":"0xE1bB02b367173ac31077a8c443802f75CC9aCCb6"
+            },
+            {
+                "name":"KOM Staking V1",
+                "github":"",
+                "address":"0x453d0a593d0af91e77e590a7935894f7ab1b87ec"
+            },
+            {
+                "name":"KOM Staking V2",
+                "github":"",
+                "address":"0x8d37b12DB32E07d6ddF10979c7e3cDECCac3dC13"
+            },
+            {
+                "name":"KOM Token",
+                "github":"",
+                "address":"0xc004e2318722ea2b15499d6375905d75ee5390b8"
+            },
+        ],
+        "Ethereum": [
+            {
+                "name":"KOM Token (BSC)",
+                "github":"",
+                "address":"0x471ea49dd8e60e697f4cac262b5fafcc307506e4"
+            },
+        ]
+    }
+},
+{
+    "name":"FUNDS",
+    "chains": ["Polygon"],
+    "icon":"https://polygon.technology/_nuxt/img/attPBHeum1UZGeogU.723c85e.jpg",
+    "infoURL":"https://funds.one/",
+    "contracts":{
+        "Polygon": [
+            {
+                "name":"Funds Token",
+                "github":"",
+                "address":"0x77a4ce7b82b69d48718a2d0c1eeb2fd03122da84"
+            },
+            
+        ]
+    }
+},
+{
+    "name":"ChessBet",
+    "chains": ["Polygon"],
+    "icon":"https://polygon.technology/_nuxt/img/att0ADiL7A7jAByft.51cd7c1.png",
+    "infoURL":"https://chessbet.games/?mode=testnet",
+    "contracts":{
+        "Polygon": [
+            {
+                "name":"Funds Token",
+                "github":"",
+                "address":"0xe617D9a72057AB3a0F8e92020984254cf7319786"
+            },
+            
+        ]
+    }
+},
+{
+    "name":"0xCrypto.io",
+    "chains": ["Polygon"],
+    "icon":"https://polygon.technology/_nuxt/img/att4g8Si9gBfLLojg.1521b6b.png",
+    "infoURL":"https://0xcrypto.io/",
+    "contracts":{
+        "Polygon": [
+            {
+                "name":"PageFactory",
+                "github":"https://github.com/0xcrypto-io/contracts/blob/main/PageFactory.sol",
+                "address":"0xb05ac5FBc473C9BB60654338fD72930B71E76BED"
+            },
+            
+        ]
+    }
+},
+{
+    "name":"KuKu Token",
+    "chains": ["Ethereum"],
+    "icon":"https://polygon.technology/_nuxt/img/att90QRNTyBGE2b7N.0f73031.png",
+    "infoURL":"https://kukutoken.com/",
+    "contracts":{
+        "Ethereum": [
+            {
+                "name":"KuKu Token",
+                "github":"https://github.com/devplex69/KuKuToken/blob/main/KuKuToken%20Smart%20Contract.sol",
+                "address":"0x97915fC7E7ad4558346F5eD956dA016C9b75533F"
+            },
+            
+        ]
+    }
+},
+{
+    "name":"The Graph",
+    "chains": ["Ethereum","Rinkeby"],
+    "icon":"https://polygon.technology/_nuxt/img/att8fQgnYoLZzJgAP.f5f864c.jpg",
+    "infoURL":"https://thegraph.com/en/",
+    "contracts":{
+        "Ethereum": [
+            {
+                "name":"Staking",
+                "github":"https://github.com/graphprotocol/contracts/blob/dev/contracts/staking/Staking.sol",
+                "address":"0xF55041E37E12cD407ad00CE2910B8269B01263b9"
+            },
+            {
+                "name":"Rewards Manager",
+                "github":"https://github.com/graphprotocol/contracts/blob/dev/contracts/rewards/RewardsManager.sol",
+                "address":"0x9Ac758AB77733b4150A901ebd659cbF8cB93ED66"
+            },
+            {
+                "name":"Dispute Manager",
+                "github":"https://github.com/graphprotocol/contracts/blob/dev/contracts/disputes/DisputeManager.sol",
+                "address":"0x97307b963662cCA2f7eD50e38dCC555dfFc4FB0b"
+            },
+            {
+                "name":"Allocation Exchange",
+                "github":"https://github.com/graphprotocol/contracts/blob/dev/contracts/statechannels/AllocationExchange.sol",
+                "address":"0x4a53cf3b3EdA545dc61dee0cA21eA8996C94385f"
+            },
+            {
+                "name":"Curation",
+                "github":"https://github.com/graphprotocol/contracts/blob/dev/contracts/curation/Curation.sol",
+                "address":"0x8FE00a685Bcb3B2cc296ff6FfEaB10acA4CE1538"
+            },
+            {
+                "name":"BancorFormula",
+                "github":"https://github.com/graphprotocol/contracts/blob/dev/contracts/bancor/BancorFormula.sol",
+                "address":"0xd0C61e8F15d9deF697E1100663eD7dA74d3727dC"
+            },
+            {
+                "name":"Controller",
+                "github":"https://github.com/graphprotocol/contracts/blob/dev/contracts/governance/Controller.sol",
+                "address":"0x24CCD4D3Ac8529fF08c58F74ff6755036E616117"
+            },
+            {
+                "name":"GraphToken",
+                "github":"https://github.com/graphprotocol/contracts/blob/dev/contracts/token/GraphToken.sol",
+                "address":"0xc944E90C64B2c07662A292be6244BDf05Cda44a7"
+            },
+            {
+                "name":"ServiceRegistry",
+                "github":"https://github.com/graphprotocol/contracts/blob/dev/contracts/discovery/ServiceRegistry.sol",
+                "address":"0xaD0C9DaCf1e515615b0581c8D7E295E296Ec26E6"
+            },
+            {
+                "name":"SubgraphNFTDescriptor",
+                "github":"https://github.com/graphprotocol/contracts/blob/dev/contracts/discovery/SubgraphNFTDescriptor.sol",
+                "address":"00x8F0B7e136891e8Bad6aa4Abcb64EeeFE29dC2Af0"
+            },
+            {
+                "name":"SubgraphNFT",
+                "github":"https://github.com/graphprotocol/contracts/blob/dev/contracts/discovery/SubgraphNFT.sol",
+                "address":"0x24e36639b3A3aaA9c928a8A6f12d34F942f1ab67"
+            },
+        ],
+        "Rinkeby": [
+            {
+                "name":"Staking",
+                "github":"https://github.com/graphprotocol/contracts/blob/dev/contracts/staking/Staking.sol",
+                "address":"0x2d44C0e097F6cD0f514edAC633d82E01280B4A5c"
+            },
+            {
+                "name":"Rewards Manager",
+                "github":"https://github.com/graphprotocol/contracts/blob/dev/contracts/rewards/RewardsManager.sol",
+                "address":"0x460cA3721131BC978e3CF3A49EfC545A2901A828"
+            },
+            {
+                "name":"Dispute Manager",
+                "github":"https://github.com/graphprotocol/contracts/blob/dev/contracts/disputes/DisputeManager.sol",
+                "address":"0x4e4B04008C0f7875CDe80e7546d8b3b03Cf1eCf1"
+            },
+            {
+                "name":"Allocation Exchange",
+                "github":"https://github.com/graphprotocol/contracts/blob/dev/contracts/statechannels/AllocationExchange.sol",
+                "address":"0x58ce0a0f41449e349c1a91dd9f3d9286bf32c161"
+            },
+            {
+                "name":"Curation",
+                "github":"https://github.com/graphprotocol/contracts/blob/dev/contracts/curation/Curation.sol",
+                "address":"0x5cCaB32d30Ca0969a8f3D495e1F67b3A90d39b14"
+            },
+            {
+                "name":"BancorFormula",
+                "github":"https://github.com/graphprotocol/contracts/blob/dev/contracts/bancor/BancorFormula.sol",
+                "address":"0xB4B6857dFcE1a31851c0fAde87E94Fc05053916D"
+            },
+            {
+                "name":"Controller",
+                "github":"https://github.com/graphprotocol/contracts/blob/dev/contracts/governance/Controller.sol",
+                "address":"0x23B1aD50996ff1b21552cDD6430868D60bF342c5"
+            },
+            {
+                "name":"GraphToken",
+                "github":"https://github.com/graphprotocol/contracts/blob/dev/contracts/token/GraphToken.sol",
+                "address":"0x54Fe55d5d255b8460fB3Bc52D5D676F9AE5697CD"
+            },
+            {
+                "name":"ServiceRegistry",
+                "github":"https://github.com/graphprotocol/contracts/blob/dev/contracts/discovery/ServiceRegistry.sol",
+                "address":"0xB2cD4D1205A55303ef0DeC2e4EfB5338f9c182bc"
+            },
+            {
+                "name":"SubgraphNFTDescriptor",
+                "github":"https://github.com/graphprotocol/contracts/blob/dev/contracts/discovery/SubgraphNFTDescriptor.sol",
+                "address":"0xCD48b23d3a711A026658b83F0a3b5c787AfA84da"
+            },
+            {
+                "name":"SubgraphNFT",
+                "github":"https://github.com/graphprotocol/contracts/blob/dev/contracts/discovery/SubgraphNFT.sol",
+                "address":"0x44d9D2e16eF55E55D7cc99F42425f9b750659dAB"
+            },
+        ]
+    }
+},
+{
+    "name":"Chainlink",
+    "chains": ["Ethereum","Polygon","Binance"],
+    "icon":"https://polygon.technology/_nuxt/img/attysqklNT7ATMroq.a36a2e7.png",
+    "infoURL":"https://chain.link/",
+    "contracts":{
+        "Ethereum": [
+            {
+                "name":"ChainLink Token",
+                "github":"",
+                "address":"0x514910771af9ca656af840dff83e8264ecf986ca"
+            },  
+        ],
+        "Polygon": [
+            {
+                "name":"ChainLink Token",
+                "github":"",
+                "address":"0xb0897686c545045aFc77CF20eC7A532E3120E0F1"
+            },  
+        ],
+        "Binance Smart Chain": [
+            {
+                "name":"ChainLink Token",
+                "github":"",
+                "address":"0x404460C6A5EdE2D891e8297795264fDe62ADBB75"
+            },  
+        ]
+
+    }
 }
 ]
